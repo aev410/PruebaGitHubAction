@@ -12,5 +12,8 @@ jobs:
       SVC_ID: ab33901e-d2a9-4ca0-9211-4a227f40e74d
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_API_KEY }}
     steps:
-      - uses: actions/checkout@v3
-      - run: railway up --service=${{ env.SVC_ID }}
+      name: Install Railway CLI
+        run:
+          curl -sSL https://raw.githubusercontent.com/railwayapp/cli/master/install.sh | sh
+        uses: actions/checkout@v3
+        run: railway up --service=${{ env.SVC_ID }}
