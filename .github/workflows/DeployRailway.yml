@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/railwayapp/cli:latest
     env:
-      SVC_ID: ab33901e-d2a9-4ca0-9211-4a227f40e74d
+      SVC_ID: cb6c0bb4-7dc0-457f-afb6-6c1bfb5549f1
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_API_KEY }}
     steps:
       name: Install Railway CLI
